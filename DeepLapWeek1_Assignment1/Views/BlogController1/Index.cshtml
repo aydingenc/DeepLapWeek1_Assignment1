@@ -1,0 +1,29 @@
+﻿@using DeepLapWeek1_Assignment1.Models
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@model Tuple<BlogDetay, BlogYazar>
+
+@using (Html.BeginForm("Post", "Blog", FormMethod.Post))
+{
+    @:Adı:
+    @Html.TextBoxFor(model => model.Item2.YazarAdi)
+    <br />
+    @:Mail:
+    @Html.TextBoxFor(model => model.Item2.YazarAdi)
+    <br />
+    @:BlogAdı:
+    @Html.TextBoxFor(model => model.Item1.BlogAdi)
+    <br />
+    @:İçerik:
+    @Html.TextBoxFor(model => model.Item1.Blogİcerik)
+    <br />
+  
+
+    <input type="submit" value="Post Et" />
+}
+
